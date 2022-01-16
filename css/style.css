@@ -122,6 +122,7 @@ nav li {
 .enjoy_after::after {
   content: "";
   position: absolute;
+  z-index: -1;
   bottom: 20px;
   left: -50px;
   width: 385px;
@@ -186,6 +187,10 @@ nav li {
   color: #686d77;
 }
 
+.play_button_img{
+  margin-bottom: -20px;
+}
+
 .h2 {
   font-family: "Volkhov";
   font-style: normal;
@@ -219,9 +224,6 @@ nav li {
   margin-left: 155px;
 }
 
-/* .category_decor {
-  position: absolute;
-} */
 .category_heading {
   text-align: center;
 }
@@ -237,6 +239,8 @@ nav li {
   flex-direction: column;
   width: 195px;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 
 .content_block_wrapper {
@@ -252,14 +256,13 @@ nav li {
   height: 315px;
   margin-top: -45px;
   position: relative;
-  z-index: 2;
 }
 
 .content_decor {
   width: 100px;
   height: 100px;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   left: -50px;
   bottom: -35px;
 }
@@ -366,10 +369,8 @@ nav li {
   font-size: 16px;
   line-height: 124.5%;
   color: #5e6282;
-
-  /* padding-left: 55px;
- */
 }
+
 .card_desc__nav_trip::before {
   content: url(/images/navigation\ 1.png);
   padding-left: 55px;
@@ -433,28 +434,6 @@ nav li {
   line-height: 124.5%;
   color: #5e6282;
 }
-
-/* .backgraund {
-  position: relative;
-  margin-left: 180px;
-  background: #59b1e6;
-  width: 355px;
-  height: 365px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#ccc),
-    to(#000)
-  );
-  opacity: 0.4;
-  width: 600px;
-  height: 400px;
-
-  /* background-color: rgba(89, 177, 230, 1);
-  width: 355px;
-  height: 365px;
-   */
 
 .card_trip_to_greece {
   position: relative;
@@ -627,7 +606,7 @@ nav li {
   padding-top: 30px;
   padding-left: 35px;
   position: relative;
-  z-index: 5;
+  background-color: white;
 }
 
 .quote_card1 {
@@ -671,6 +650,7 @@ nav li {
 
 .response_slide_card2 {
   position: absolute;
+  z-index: -1;
   width: 500px;
   height: 230px;
   border: 2px solid #f7f7f7;
@@ -683,7 +663,6 @@ nav li {
   border-radius: 10px;
   margin-top: -125px;
   margin-left: 50px;
-  z-index: 1;
 }
 
 .quote_card2 {
@@ -819,21 +798,134 @@ nav li {
   line-height: 23px;
   text-align: center;
   color: #FFFFFF;
+   transition: 1s;
+}
+
+.form__button__Subscribe:hover{
+ box-shadow: 6px 6px #989898;
+  transition: 1s;
 }
 
 .subscribe_button_abs{
   position: absolute;
-  right: -35px;
-  top: -35px;
+  right: -25px;
+  top: -25px;
   width:70px ;
   height: 70px;
   border-radius: 50%;
   border: none;
   align-items: center;
   background: linear-gradient(201.65deg, #747DEF 10.27%, #5E3BE1 100%);
+  transition: 1s;
+}
+
+.subscribe_button_abs:hover{
+  box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+  transition: 1s;
+
 }
 
 .footer{
+  margin-left: 185px;
+}
+
+.footer_wrap{
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 85px;
+}
+
+.footer_anchor{
+  transition: 0.5s;
+}
+
+.footer_anchor:hover {
+  transition: 0.5s;
+  text-shadow: 1px 3px 4px;
+}
+
+.company_desc{
+  margin-right: 85px;
+  margin-top: -15px;
+}
+
+.company_name{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 66px;
+  color: #181E4B;
+  padding-bottom: 20px;
+}
+
+.company_text{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 124.5%;
+  color: #5E6282;
+}
+
+.footer_list{
+  margin-right: 80px;
+}
+
+.header_footer_list{
+  padding-bottom: 35px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 124.5%;
+  color: #080809;
+}
+
+.footer_list_text{
+  padding-bottom: 10px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 124.5%;
+  color: #5E6282;
+}
+
+.footer_logo{
+  width:40px ;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-left: -10px;
+}
+
+.text_app{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 124.5%;
+  letter-spacing: 0.005em;
+  color: #5E6282;
+}
+
+.footer_logo_app{
+  width: 105px;
+  height: 35px;
+  border-radius: 17.5px;
+  margin-right: 5px;
+}
+
+.copyrights{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 124.5%;
+  color: #5E6282;
+  margin-bottom: 80px;
+  padding-left: 425px;
 }
